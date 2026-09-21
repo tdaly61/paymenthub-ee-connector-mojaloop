@@ -18,7 +18,6 @@ import org.mifos.connector.common.mojaloop.type.Scenario;
 import org.mifos.connector.common.mojaloop.type.TransactionRequestState;
 import org.mifos.connector.common.mojaloop.type.TransactionRole;
 import org.mifos.connector.mojaloop.camel.trace.AddTraceHeaderProcessor;
-import org.mifos.connector.mojaloop.camel.trace.GetCachedTransactionIdProcessor;
 import org.mifos.connector.mojaloop.properties.PartyProperties;
 import org.mifos.connector.mojaloop.util.MojaloopUtil;
 import org.mifos.connector.mojaloop.zeebe.ZeebeProcessStarter;
@@ -63,9 +62,6 @@ public class TransactionRoutes extends ErrorHandlerRouteBuilder {
 
     @Autowired
     private AddTraceHeaderProcessor addTraceHeaderProcessor;
-
-    @Autowired
-    private GetCachedTransactionIdProcessor getCachedTransactionIdProcessor;
 
     @Autowired
     private ZeebeProcessStarter zeebeProcessStarter;
